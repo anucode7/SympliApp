@@ -1,0 +1,40 @@
+﻿@model SympliWebApp.Models.SearchViewModel
+@{
+    ViewData["Title"] = "Sympli SEO status App";
+}
+
+<h2>@ViewData["Title"]</h2>
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+@using (Html.BeginForm(FormMethod.Post, new { @class = "form-horizontal", id = "formSeo" }))
+{
+    <fieldset>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">@Html.DisplayNameFor(model => model.SearchEngine)</label>
+            <div class="col-md-4">
+                @Html.DropDownListFor(m => m.SelectedSearchEngine, Model.SearchEngine, new { @class = "form-control", id = "ddlEngine" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label"> @Html.DisplayNameFor(model => model.SearchText)</label>
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.SearchText, new { @class = "form-control", id = "txtSearch" })
+                @Html.ValidationMessageFor(m => m.SearchText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label"> @Html.DisplayNameFor(model => model.SeoText)</label>
+            <div class="col-md-4">
+                @Html.TextBoxFor(m => m.SeoText, new { @class = "form-control", id = "txtSeo" })
+                @Html.ValidationMessageFor(m => m.SeoText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-4 bold">
+                <input type="submit" value="Seo Results for Today" class="btn btn-primary" id="btnSubmit" />
+            </div>
+        </div>
+        <div class="form-group" id="divResult"></div>
+    </fieldset>
+}

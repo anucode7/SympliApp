@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.8.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\typings\SearchViewModel.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\seo.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\BaseJQueryEventObject.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQuery.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryAjaxSettings.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryAnimationOptions.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryCallback.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryCoordinates.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryDeferred.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryEventConstructor.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryEventObject.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryGenericPromise.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryInputEventObject.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryKeyEventObject.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryMouseEventObject.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryParam.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryPromise.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryPromiseCallback.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryPromiseOperator.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQuerySerializeArrayElement.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryStatic.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQuerySupport.ts" />
+    <TypeScriptCompile Include="wwwroot\typings\_definition\jquery\JQueryXHR.ts" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES2019</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+
+
+
+</Project>
